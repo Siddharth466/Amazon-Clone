@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon - Premium Online Shopping Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/fav.jpg" type="image/x-icon">
+</head>
+<body>
+      <header>
+        <div class="navbar">
+            <div class="nav-logo border">
+                <div class="logo"></div>
+            </div>
+            <div class="nav-add border" id="navLocationBtn">
+               <p class="add1">Deliver To</p>
+               <div class="add-icon">
+                <i class="fa-solid fa-location-dot"></i>
+                <p class="add2" id="navLocationText">Aligarh</p>
+               </div>
+           </div> 
+            
+           <div class="nav-search border">
+            <select class="search-select" id="searchCategory">
+             <option value="All">All</option>
+             <option value="Electronics">Electronics</option>
+             <option value="Books">Books</option>
+             <option value="Fashion">Fashion</option>
+             <option value="Home & Kitchen">Home & Kitchen</option>
+             <option value="Sports">Sports</option>
+            </select>
+            <input placeholder="Search Amazon.in" class="input" id="searchInput">
+            <div class="search-icon" id="searchBtn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+               </div>
+             </div>
+             <div class="login border">
+               <i class="fa-solid fa-user"></i>
+               <a href="index2.html">Login</a>
+           </div>
+           <div class="cart border" id="cartBtn">
+             <div class="cart-icon-wrapper">
+               <i class="fa-solid fa-cart-shopping"></i>
+               <span class="cart-badge" id="cartBadge">0</span>
+             </div>
+             <div class="cart2">
+               Cart
+             </div>
+           </div>
+           <div class="becomeaseller border">
+             <i class="fa-solid fa-shop"></i>
+             Become a Seller
+         </div>
+          </div>
+
+          
+         
+       
+        <div class="panel">
+          <div class="panel-All border" id="allMenuBtn">
+            <div class="panel-icon">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+            All
+            <div class="panel-ops">
+              <p>Fresh</p>
+              <p>MX Player</p>
+              <p>Sell</p>
+              <p>Best Sellers</p>
+              <p>Today's Deals</p>
+              <p>Mobiles</p>
+              <p>Electronics</p>
+              <p>Hom & Kitchen</p>
+              <p>Customer Services</p>
+              <p>Prime</p>
+              <p>New Releases</p>
+              <p>Amazon Pay</p>
+              <p>Fashion</p>
+              <p>Car & Motorbike</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="main">
+        
+      </div>
+      <!-- Main Content -->
+
+      <div class="main-content">
+        <!-- Card 1 -->
+        <div class="content" data-id="1" data-name="Gaming Accessories" data-price="79.99" data-category="Electronics" data-image="Images/c1.png">
+          <div class="co1">
+            <h2>Gaming Accessories</h2>
+            <div class="img1" style="background-image: url('Images/c1.png');"></div>
+            <div class="product-price-row">
+              <span class="price-tag">$79.99</span>
+              <span class="original-price">$120.00</span>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="content-a">See more</a>
+              <div class="action-buttons">
+                <button class="btn-add-to-cart"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                <button class="btn-buy-now"><i class="fa-solid fa-bolt"></i> Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="content" data-id="2" data-name="Top-Brand SmartPhone" data-price="699.99" data-category="Electronics" data-image="Images/c2.png">
+          <div class="co1">
+            <h2>Top-Brand SmartPhone</h2>
+            <div class="img1" style="background-image: url('Images/c2.png');"></div>
+            <div class="product-price-row">
+              <span class="price-tag">$699.99</span>
+              <span class="original-price">$899.00</span>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="content-a">See more</a>
+              <div class="action-buttons">
+                <button class="btn-add-to-cart"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                <button class="btn-buy-now"><i class="fa-solid fa-bolt"></i> Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="content" data-id="3" data-name="Up-To 60% Off ⏐ Books" data-price="14.99" data-category="Books" data-image="Images/c3.png">
+          <div class="co1">
+            <h2>Up-To 60% Off ⏐ Books</h2>
+            <div class="img1" style="background-image: url('Images/c4.png');"></div>
+            <div class="product-price-row">
+              <span class="price-tag">$14.99</span>
+              <span class="original-price">$39.99</span>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="content-a">See more</a>
+              <div class="action-buttons">
+                <button class="btn-add-to-cart"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                <button class="btn-buy-now"><i class="fa-solid fa-bolt"></i> Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="content" data-id="4" data-name="Men's Fashion" data-price="39.99" data-category="Fashion" data-image="Images/c4.png">
+          <div class="co1">
+            <h2>Men's Fashion</h2>
+            <div class="img1" style="background-image: url('Images/c3.png');"></div>
+            <div class="product-price-row">
+              <span class="price-tag">$39.99</span>
+              <span class="original-price">$59.99</span>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="content-a">See more</a>
+              <div class="action-buttons">
+                <button class="btn-add-to-cart"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                <button class="btn-buy-now"><i class="fa-solid fa-bolt"></i> Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="content" data-id="5" data-name="Home & Kitchen Accessories" data-price="49.99" data-category="Home & Kitchen" data-image="Images/c5.png">
+          <div class="co1">
+            <h2>Home & Kitchen Accessories</h2>
+            <div class="img1" style="background-image: url('Images/c5.png');"></div>
+            <div class="product-price-row">
+              <span class="price-tag">$49.99</span>
+              <span class="original-price">$75.00</span>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="content-a">See more</a>
+              <div class="action-buttons">
+                <button class="btn-add-to-cart"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                <button class="btn-buy-now"><i class="fa-solid fa-bolt"></i> Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="content" data-id="6" data-name="Top-Brand Watches" data-price="199.99" data-category="Fashion" data-image="Images/c6.png">
+          <div class="co1">
+            <h2>Top-Brand Watches</h2>
+            <div class="img1" style="background-image: url('Images/c6.png');"></div>
+            <div class="product-price-row">
+              <span class="price-tag">$199.99</span>
+              <span class="original-price">$299.00</span>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="content-a">See more</a>
+              <div class="action-buttons">
+                <button class="btn-add-to-cart"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                <button class="btn-buy-now"><i class="fa-solid fa-bolt"></i> Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="content" data-id="7" data-name="Top-Brand Footwear" data-price="89.99" data-category="Fashion" data-image="Images/c7.png">
+          <div class="co1">
+            <h2>Top-Brand Footwear</h2>
+            <div class="img1" style="background-image: url('Images/c7.png');"></div>
+            <div class="product-price-row">
+              <span class="price-tag">$89.99</span>
+              <span class="original-price">$120.00</span>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="content-a">See more</a>
+              <div class="action-buttons">
+                <button class="btn-add-to-cart"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                <button class="btn-buy-now"><i class="fa-solid fa-bolt"></i> Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="content" data-id="8" data-name="New-Arrival in Sports" data-price="29.99" data-category="Sports" data-image="images/c8.png">
+          <div class="co1">
+            <h2>New-Arrival in Sports</h2>
+            <div class="img1" style="background-image: url('images/c8.png');"></div>
+            <div class="product-price-row">
+              <span class="price-tag">$29.99</span>
+              <span class="original-price">$45.00</span>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="content-a">See more</a>
+              <div class="action-buttons">
+                <button class="btn-add-to-cart"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                <button class="btn-buy-now"><i class="fa-solid fa-bolt"></i> Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+         
+          <footer>
+            <div class="foot1">
+              Back To Top
+            </div>
+
+            <div class="foot2">
+              <ul>
+                <p>  ONLINE SHOPPING</p>
+              <a>Men</a>
+              <a>Women</a>
+              <a>Kids</a>
+              <a>Home & Living</a>
+              <a> Beauty</a>
+              <a>Gift Cards</a> 
+              <a> Amazon Insider</a>
+              </ul>
+              <ul>
+              <p>	Connect with Us</p>
+               <a href="https://www.facebook.com/profile.php?id=61562583734876">Facebook</a> 
+                <a>Twitter</a>
+                <a href="https://www.instagram.com/_siddhartt">Instagram</a>
+                <a href="https://youtube.com/@siiddhartt?si=GoJlW8bai3EKEpjU"> YouTube</a>
+              </ul>
+              <ul>
+                <p>Make Money with Us</p>
+                <a>Sell on Amazon</a>
+               <a> Sell under Amazon Accelerator</a>
+                <a>Protect and Build Your Brand</a>
+               <a> Amazon Global Selling</a>
+                <a>Supply to Amazon</a>
+                <a>Become an Affiliate</a>
+               <a>Fulfilment by Amazon</a>
+               <a>Advertise Your Products</a>
+                <a>Amazon Pay on Merchants</a>
+              </ul>
+              <ul>
+                	
+             <p>Let Us Help You</p>
+              <a>Your Account</a>
+                <a>Returns Centre</a>
+              <a> Recalls and Product Safety Alerts</a>
+                  <a>100% Purchase Protection</a>
+                    <a>Amazon App Download</a>
+                     <a class="feedback-btn" href="mailto:siddhartsharma466@gmail.com?subject=Website Feedback">Help</a>
+                </ul>
+            </div>
+            
+           <div class="foot3">
+
+          
+           <div class="foot3-logo">
+
+           </div>
+          </div>
+          
+          </footer>
+
+          <!-- Cart Slide-Out Drawer -->
+          <div class="cart-drawer" id="cartDrawer">
+            <div class="drawer-header">
+              <h3><i class="fa-solid fa-cart-shopping"></i> Your Cart</h3>
+              <button class="close-drawer-btn" id="closeDrawer"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="drawer-content" id="cartItemsContainer">
+              <!-- Empty state -->
+              <div class="empty-cart-message">
+                <i class="fa-solid fa-basket-shopping"></i>
+                <p>Your cart is empty</p>
+                <button class="shop-now-btn" id="shopNowBtn">Shop Now</button>
+              </div>
+            </div>
+            <div class="drawer-footer">
+              <div class="subtotal-container">
+                <span>Subtotal:</span>
+                <span class="subtotal-price" id="cartSubtotal">$0.00</span>
+              </div>
+              <button class="checkout-btn" id="checkoutBtn"><i class="fa-solid fa-credit-card"></i> Proceed to Checkout</button>
+            </div>
+          </div>
+          <div class="drawer-overlay" id="drawerOverlay"></div>
+
+          <!-- Checkout Sandbox Modal -->
+          <div class="checkout-modal" id="checkoutModal">
+            <div class="modal-header">
+              <h3><i class="fa-solid fa-shield-halved"></i> Secure Checkout</h3>
+              <button class="close-modal-btn" id="closeModal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+              <div class="order-summary">
+                <h4>Order Summary</h4>
+                <div id="modalItemsContainer"></div>
+                <div class="modal-pricing">
+                  <div class="price-row">
+                    <span>Items:</span>
+                    <span id="modalItemsTotal">$0.00</span>
+                  </div>
+                  <div class="price-row">
+                    <span>Shipping:</span>
+                    <span class="free-shipping">FREE</span>
+                  </div>
+                  <div class="price-row total-row">
+                    <span>Order Total:</span>
+                    <span id="modalOrderTotal">$0.00</span>
+                  </div>
+                </div>
+              </div>
+              <div class="shipping-details">
+                <h4>Shipping Information</h4>
+                <div class="shipping-address-card">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <div>
+                    <strong>Valued Customer</strong>
+                    <p id="modalShippingAddress">Aligarh, Uttar Pradesh, India</p>
+                  </div>
+                </div>
+              </div>
+              <div class="payment-details">
+                <h4>Payment Method</h4>
+                <div class="payment-method-card">
+                  <i class="fa-solid fa-credit-card"></i>
+                  <span>Simulated Secure Sandbox Payment</span>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn-complete-order" id="btnCompleteOrder"><i class="fa-solid fa-lock"></i> Complete Simulated Purchase</button>
+            </div>
+          </div>
+          <div class="modal-overlay" id="modalOverlay"></div>
+
+          <!-- Location Selector Modal -->
+          <div class="address-modal" id="addressModal">
+            <div class="modal-header">
+              <h3><i class="fa-solid fa-map-location-dot"></i> Change Delivery Location</h3>
+              <button class="close-modal-btn" id="closeAddressModal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+              <p>Select your delivery destination to see local shipping rates and deals.</p>
+              <div class="form-group">
+                <label for="addressInput">Enter City / Region Name:</label>
+                <input type="text" id="addressInput" placeholder="e.g. New Delhi, Mumbai, New York" />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn-save-address" id="btnSaveAddress">Update Location</button>
+            </div>
+          </div>
+
+          <!-- Success Screen Splash -->
+          <div class="success-screen" id="successScreen">
+            <div class="success-card">
+              <div class="success-icon-container">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <h2>Order Confirmed!</h2>
+              <p>Thank you for your purchase. Your simulated order was processed successfully.</p>
+              <div class="order-id-box">
+                <span>Order ID:</span>
+                <span id="orderIdText">AMZ-932840-IN</span>
+              </div>
+              <button class="btn-dismiss-success" id="btnDismissSuccess">Continue Shopping</button>
+            </div>
+          </div>
+
+          <!-- Left sliding Sidebar Menu -->
+          <div class="sidebar-menu" id="sidebarMenu">
+            <div class="sidebar-header">
+              <a href="index2.html" class="sidebar-user">
+                <i class="fa-solid fa-circle-user"></i> Hello, Sign in
+              </a>
+              <button class="close-sidebar-btn" id="closeSidebar"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="sidebar-content">
+              <div class="sidebar-section">
+                <h3>Trending</h3>
+                <ul>
+                  <li><a href="#" class="sidebar-link" data-filter="All">Best Sellers</a></li>
+                  <li><a href="#" class="sidebar-link" data-filter="All">New Releases</a></li>
+                  <li><a href="#" class="sidebar-link" data-filter="All">Movers & Shakers</a></li>
+                </ul>
+              </div>
+              <hr class="sidebar-divider" />
+              <div class="sidebar-section">
+                <h3>Shop by Category</h3>
+                <ul>
+                  <li><a href="#" class="sidebar-link" data-filter="Electronics"><i class="fa-solid fa-laptop"></i> Electronics</a></li>
+                  <li><a href="#" class="sidebar-link" data-filter="Books"><i class="fa-solid fa-book"></i> Books</a></li>
+                  <li><a href="#" class="sidebar-link" data-filter="Fashion"><i class="fa-solid fa-shirt"></i> Fashion</a></li>
+                  <li><a href="#" class="sidebar-link" data-filter="Home & Kitchen"><i class="fa-solid fa-house-laptop"></i> Home & Kitchen</a></li>
+                  <li><a href="#" class="sidebar-link" data-filter="Sports"><i class="fa-solid fa-dumbbell"></i> Sports & Outdoors</a></li>
+                </ul>
+              </div>
+              <hr class="sidebar-divider" />
+              <div class="sidebar-section">
+                <h3>Help & Settings</h3>
+                <ul>
+                  <li><a href="index2.html">Your Account</a></li>
+                  <li><a href="mailto:siddhartsharma466@gmail.com?subject=Website Feedback">Customer Service</a></li>
+                  <li><a href="index2.html">Sign In</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+          <!-- Storefront Script Link -->
+          <script src="store.js"></script>
+</body>
+</html>

@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap");
+
+/* ==========================================================================
+   Full-Page Biometric Gateway Theme
+   ========================================================================== */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-dominant: #FFFFFF;
+    --color-secondary: #1A202C;
+    --color-brand: #1A56DB;
+    --color-brand-light: rgba(26, 86, 219, 0.15);
+    --color-accent-orange: #FF6B00;
+    --color-accent-crimson: #FF4D4D;
+    --color-text-muted: #A0AEC0;
+    --color-bg-dark: #0F172A; /* Slate Navy */
+    --color-bg-charcoal: #1A202C;
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-elastic: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+html {
+    font-family: "Outfit", sans-serif;
+    font-size: 62.5%;
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background: radial-gradient(circle at center, #1E293B 0%, #0F172A 100%);
+    color: var(--color-dominant);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* ==========================================================================
+   Glassmorphic Secure Gateway Card
+   ========================================================================== */
+.secure-gateway-card {
+    background: rgba(26, 32, 44, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1.5px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 4rem 3.5rem;
+    max-width: 480px;
+    width: 100%;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.gateway-header {
+    margin-bottom: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Amazon Logo Simulation in Gateway */
+.gateway-logo {
+    background-image: url("Images/amazon_logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40px;
+    width: 130px;
+    margin-bottom: 2.5rem;
+}
+
+.lock-indicator {
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-brand-light);
+    color: var(--color-brand);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+    border: 1.5px solid rgba(26, 86, 219, 0.3);
+    animation: pulseGlow 2.5s infinite;
+}
+
+.gateway-header h2 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--color-dominant);
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.gateway-header p {
+    font-size: 1.3rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    padding: 0 10px;
+}
+
+/* ==========================================================================
+   Fingerprint Scanning Module
+   ========================================================================== */
+.biometric-outer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.container {
+    align-items: center;
+    background: var(--color-bg-charcoal);
+    border: 1.5px solid rgba(255, 255, 255, 0.05);
+    border-radius: 40px;
+    box-shadow: 0 14px 28px rgba(26, 86, 219, 0.15), 0 10px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    height: 80px;
+    justify-content: center;
+    position: relative;
+    width: 200px;
+    cursor: pointer;
+    transition: var(--transition-elastic);
+    margin-bottom: 2.5rem;
+}
+
+.container:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 20px 30px rgba(26, 86, 219, 0.3);
+    border-color: rgba(26, 86, 219, 0.4);
+}
+
+.container:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+.text {
+    color: var(--color-dominant);
+    position: absolute;
+    transition: opacity 300ms;
+    user-select: none;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.fingerprint {
+    left: -8px;
+    opacity: 0;
+    position: absolute;
+    stroke: #4A5568;
+    top: -9px;
+    transition: opacity 1ms;
+}
+
+.fingerprint-active {
+    stroke: var(--color-brand); /* Royal Blue scanner scanning! */
+}
+
+.fingerprint-out {
+    opacity: 1;
+}
+
+.odd {
+    stroke-dasharray: 0px 50px;
+    stroke-dashoffset: 1px;
+    transition: stroke-dasharray 1ms;
+}
+
+.even {
+    stroke-dasharray: 50px 50px;
+    stroke-dashoffset: -41px;
+    transition: stroke-dashoffset 1ms;
+}
+
+.ok {
+    opacity: 0;
+}
+
+/* Biometric Status Notice */
+.biometric-status {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #A0AEC0;
+    min-height: 20px;
+    transition: var(--transition-smooth);
+}
+
+/* ==========================================================================
+   Scanning Keyframe Triggers
+   ========================================================================== */
+.active.container {
+    animation: 6s Container;
+}
+
+.active .text {
+    opacity: 0;
+    animation: 6s Text forwards;
+}
+
+.active .fingerprint {
+    opacity: 1;
+    transition: opacity 300ms 200ms;
+}
+
+.active .fingerprint-base .odd {
+    stroke-dasharray: 50px 50px;
+    transition: stroke-dasharray 800ms 100ms;
+}
+
+.active .fingerprint-base .even {
+    stroke-dashoffset: 0px;
+    transition: stroke-dashoffset 800ms;
+}
+
+.active .fingerprint-active .odd {
+    stroke-dasharray: 50px 50px;
+    transition: stroke-dasharray 2000ms 1500ms;
+}
+
+.active .fingerprint-active .even {
+    stroke-dashoffset: 0px;
+    transition: stroke-dashoffset 2000ms 1300ms;
+}
+
+.active .fingerprint-out {
+    opacity: 0;
+    transition: opacity 300ms 4100ms;
+}
+
+.active .ok {
+    opacity: 1;
+    animation: 6s Ok forwards;
+}
+
+/* ==========================================================================
+   Gateway Footer
+   ========================================================================== */
+.gateway-footer {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.back-to-store a {
+    color: var(--color-brand);
+    font-size: 1.35rem;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition-smooth);
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.back-to-store a:hover {
+    color: var(--color-accent-orange);
+    background-color: var(--color-brand-light);
+    border-color: rgba(255, 107, 0, 0.2);
+    transform: translateX(-3px);
+}
+
+.copy {
+    font-size: 1.05rem;
+    color: rgba(160, 174, 192, 0.6);
+}
+
+/* ==========================================================================
+   Keyframes Definitions
+   ========================================================================== */
+@keyframes Container {
+    0% { width: 200px }
+    6% { width: 80px }
+    71% { transform: scale(1); }
+    75% { transform: scale(1.18); }
+    77% { transform: scale(1); }
+    94% { width: 80px }
+    100% { width: 200px }
+}
+
+@keyframes Text {
+    0% { opacity: 1; transform: scale(1); }
+    6% { opacity: 0; transform: scale(0.5); }
+    94% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes Ok {
+    0% { opacity: 0 }
+    70% { opacity: 0; transform: scale(0); }
+    75% { opacity: 1; transform: scale(1.1); }
+    77% { opacity: 1; transform: scale(1); }
+    92% { opacity: 1; transform: scale(1); }
+    96% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 0 }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(26, 86, 219, 0.4);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 0 15px 5px rgba(26, 86, 219, 0.25);
+        transform: scale(1.03);
+    }
+}
