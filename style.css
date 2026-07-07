@@ -319,14 +319,56 @@ a {
    Hero / Billboard Banner
    ========================================================================== */
 .main {
-    background-image: linear-gradient(to bottom, rgba(26, 32, 44, 0.1), rgba(248, 250, 252, 1)), url(Images/hero4.png);
+   /* ==========================================================================
+   Hero / Billboard Banner (Updated Sliding System)
+   ========================================================================== */
+.main {
+    height: 380px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Master Moving Slider Track Line */
+.hero-slider {
+    display: flex;
+    width: 400%; /* Accounts for 4 frames wide horizontally */
+    height: 100%;
+    animation: amazonHeroSlide 20s infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Individual Frame Properties */
+.slide {
+    width: 25%; /* Splits up the 400% parent track equally */
+    height: 100%;
     background-size: cover;
     background-position: center;
-    height: 380px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    position: relative;
+}
+
+/* 4-Image Horizontal Staging Keyframes Sequence */
+@keyframes amazonHeroSlide {
+    /* Slide 1 Viewable window */
+    0%, 20% {
+        transform: translateX(0%);
+    }
+    /* Transition to Slide 2 */
+    25%, 45% {
+        transform: translateX(-25%);
+    }
+    /* Transition to Slide 3 */
+    50%, 70% {
+        transform: translateX(-50%);
+    }
+    /* Transition to Slide 4 */
+    75%, 95% {
+        transform: translateX(-75%);
+    }
+    /* Smooth wrap back to Frame 1 */
+    100% {
+        transform: translateX(0%);
+    }
+}
+
 }
 
 /* ==========================================================================
